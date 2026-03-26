@@ -2,31 +2,32 @@ import { services } from "@/content/site";
 
 export function ServicesSection() {
   return (
-    <section id="oferta" className="scroll-mt-24 py-20 sm:py-28">
+    <section id="uslugi" className="scroll-mt-24 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+          <h2 className="font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             {services.title}
           </h2>
-          <p className="mt-4 text-lg text-zinc-400">{services.subtitle}</p>
+          <p className="mt-4 text-lg text-navy-muted">{services.subtitle}</p>
         </div>
-        <ul className="mt-12 grid gap-4 sm:grid-cols-2 lg:gap-5">
-          {services.items.map((item, i) => (
+        <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:gap-6">
+          {services.items.map((item) => (
             <li
               key={item.title}
-              className="group relative overflow-hidden rounded-2xl border border-white/10 bg-[#0c0c10] p-6 transition hover:border-[#ff6b4a]/30 sm:p-8"
+              className="flex gap-5 rounded-2xl border border-navy/8 bg-white p-6 shadow-sm shadow-navy/5 transition hover:-translate-y-0.5 hover:shadow-md sm:p-8"
             >
               <span
+                className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-cream-dark text-2xl shadow-inner"
                 aria-hidden
-                className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-[#ff6b4a]/10 blur-2xl transition group-hover:bg-[#ff6b4a]/20"
-              />
-              <span className="text-xs font-semibold uppercase tracking-wider text-[#ff6b4a]">
-                {String(i + 1).padStart(2, "0")}
+              >
+                {item.icon}
               </span>
-              <h3 className="mt-3 text-xl font-semibold text-white">{item.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-zinc-400 sm:text-base">
-                {item.body}
-              </p>
+              <div>
+                <h3 className="font-display text-lg font-bold text-navy">{item.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-navy-muted sm:text-base">
+                  {item.body}
+                </p>
+              </div>
             </li>
           ))}
         </ul>

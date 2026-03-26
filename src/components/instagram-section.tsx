@@ -30,21 +30,21 @@ export function InstagramSection() {
   return (
     <section
       id="instagram"
-      className="scroll-mt-24 border-t border-white/10 bg-[#060608] py-20 sm:py-28"
+      className="scroll-mt-24 border-t border-navy/8 bg-gradient-to-b from-cream to-cream-dark/40 py-20 sm:py-28"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl">
-            <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
               {instagramSection.title}
             </h2>
-            <p className="mt-4 text-lg text-zinc-400">{instagramSection.subtitle}</p>
+            <p className="mt-4 text-lg text-navy-muted">{instagramSection.subtitle}</p>
           </div>
           <Link
             href={site.instagram}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] px-6 text-sm font-semibold text-white shadow-lg transition hover:brightness-110"
+            className="inline-flex h-11 shrink-0 items-center justify-center rounded-full bg-[linear-gradient(45deg,#f09433_0%,#e6683c_25%,#dc2743_50%,#cc2366_75%,#bc1888_100%)] px-6 text-sm font-bold text-white shadow-lg transition hover:brightness-110"
           >
             {instagramSection.emptyCta}
           </Link>
@@ -60,8 +60,8 @@ export function InstagramSection() {
                     data-instgrm-permalink={url}
                     data-instgrm-version="14"
                     style={{
-                      background: "#0c0c10",
-                      border: "1px solid rgba(255,255,255,0.08)",
+                      background: "#ffffff",
+                      border: "1px solid rgba(21,34,56,0.1)",
                       borderRadius: "1rem",
                       margin: 0,
                       maxWidth: "540px",
@@ -81,34 +81,33 @@ export function InstagramSection() {
           </>
         ) : (
           <div className="mt-12 grid gap-6 lg:grid-cols-[1.4fr_1fr]">
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-[#1a1020] via-[#0c0c10] to-[#0c1018] p-8 sm:p-12">
+            <div className="relative overflow-hidden rounded-3xl border border-navy/8 bg-white p-8 shadow-lg shadow-navy/5 sm:p-12">
               <div
                 aria-hidden
-                className="absolute -right-20 top-0 h-64 w-64 rounded-full bg-gradient-to-br from-[#f09433]/30 to-[#bc1888]/20 blur-3xl"
+                className="absolute -right-16 -top-16 h-56 w-56 rounded-full bg-brand/15 blur-3xl"
               />
-              <p className="relative text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              <p className="relative text-lg leading-relaxed text-navy-muted sm:text-xl">
                 Na profilu{" "}
-                <span className="font-medium text-white">{site.instagramHandle}</span>{" "}
-                publikujemy zajęcia, zapowiedzi, kulisy sali i krótkie formy wideo — to
-                najszybszy sposób, żeby być na bieżąco z grafikiem i wydarzeniami w
-                Trójmieście.
+                <span className="font-bold text-navy">{site.instagramHandle}</span> pokazujemy
+                realizacje przeprowadzek, transport „na już” i montaże mebli — zobaczysz, jak
+                pracujemy i z jakim sprzętem jeździmy po Trójmieście.
               </p>
-              <p className="relative mt-6 text-sm text-zinc-500">{instagramSection.emptyHint}</p>
+              <p className="relative mt-6 text-sm text-navy-muted/90">{instagramSection.emptyHint}</p>
             </div>
             <Link
               href={site.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex flex-col justify-between rounded-3xl border border-white/10 bg-[#0c0c10] p-8 transition hover:border-[#ff6b4a]/40"
+              className="group flex flex-col justify-between rounded-3xl border border-navy/8 bg-navy p-8 text-white shadow-xl transition hover:border-brand/50"
             >
               <div>
                 <InstagramGlyph className="h-10 w-10 text-white" />
-                <p className="mt-6 text-xl font-semibold text-white">Śledź nas na żywo</p>
-                <p className="mt-2 text-sm leading-relaxed text-zinc-400">
-                  Grafik, backstage, motywacja i społeczność — w jednym miejscu.
+                <p className="mt-6 font-display text-xl font-bold">Instagram Moveo</p>
+                <p className="mt-2 text-sm leading-relaxed text-white/75">
+                  Zdjęcia z tras, krótkie filmy i szybki kontakt w wiadomościach prywatnych.
                 </p>
               </div>
-              <span className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[#ff6b4a] group-hover:gap-3 transition-all">
+              <span className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-brand group-hover:gap-3 transition-all">
                 Przejdź do profilu
                 <span aria-hidden>→</span>
               </span>

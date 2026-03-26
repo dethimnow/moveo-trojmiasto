@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { DM_Sans, Outfit } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
-const dmSans = DM_Sans({
-  variable: "--font-dm",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
@@ -46,9 +46,9 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
-      className={`${outfit.variable} ${dmSans.variable} h-full scroll-smooth antialiased`}
+      className={`${montserrat.variable} ${inter.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[#070709] text-zinc-100">{children}</body>
+      <body className="min-h-full flex flex-col bg-cream text-navy">{children}</body>
     </html>
   );
 }
