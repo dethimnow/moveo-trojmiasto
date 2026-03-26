@@ -6,7 +6,7 @@ export const site = {
   instagram: "https://www.instagram.com/moveo_trojmiasto/",
   instagramHandle: "@moveo_trojmiasto",
   locale: "pl_PL",
-  url: "https://moveo-trojmiasto.pl",
+  url: "https://moveo-trojmiasto.vercel.app",
 } as const;
 
 export const nav = [
