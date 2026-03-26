@@ -6,9 +6,9 @@ export const site = {
   instagram: "https://www.instagram.com/moveo_trojmiasto/",
   instagramHandle: "@moveo_trojmiasto",
   /** Wyświetlany numer (spacje dla czytelności). */
-  phoneDisplay: "+48 888 555 000",
+  phoneDisplay: "+48 533 562 062",
   /** Bez spacji — link tel: */
-  phoneHref: "tel:+48888555000",
+  phoneHref: "tel:+48533562062",
   locale: "pl_PL",
   url: "https://moveo-trojmiasto.vercel.app",
 } as const;
