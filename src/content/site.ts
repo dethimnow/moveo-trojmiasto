@@ -5,6 +5,10 @@ export const site = {
     "Kompleksowy transport, bezpieczne przeprowadzki i profesjonalny montaż mebli w Gdańsku, Gdyni i Sopocie. Szybko, sprawnie i bez stresu.",
   instagram: "https://www.instagram.com/moveo_trojmiasto/",
   instagramHandle: "@moveo_trojmiasto",
+  /** Wyświetlany numer (spacje dla czytelności). */
+  phoneDisplay: "+48 888 555 000",
+  /** Bez spacji — link tel: */
+  phoneHref: "tel:+48888555000",
   locale: "pl_PL",
   url: "https://moveo-trojmiasto.vercel.app",
 } as const;

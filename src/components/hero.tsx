@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { hero } from "@/content/site";
+import { hero, site } from "@/content/site";
 
 export function Hero() {
   return (
@@ -43,6 +43,15 @@ export function Hero() {
               {hero.ctaSecondary}
             </Link>
           </div>
+          <p className="mt-6 text-sm text-navy-muted sm:text-base">
+            <span className="font-semibold text-navy">Zadzwoń: </span>
+            <a
+              href={site.phoneHref}
+              className="font-display text-lg font-bold tabular-nums text-brand underline decoration-brand/30 underline-offset-4 transition hover:decoration-brand sm:text-xl"
+            >
+              {site.phoneDisplay}
+            </a>
+          </p>
           <dl className="mt-12 grid grid-cols-3 gap-4 border-t border-navy/10 pt-8 sm:max-w-lg sm:gap-6">
             <div>
               <dt className="text-xs font-semibold uppercase tracking-wider text-navy-muted">Zasięg</dt>
